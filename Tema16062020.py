@@ -26,10 +26,25 @@ print(separa(a))
 
 
 
-#2. Create a function function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+#2. Create a function function that accepts a string parameter, and reverses each word in the string.
+# All spaces in the string should be retained.
 #Examples
 #"This is an example!" ==> "sihT si na !elpmaxe"
 #"double  spaces"      ==> "elbuod  secaps"
+def invers(a):
+    b = a.split()
+    res = ''
+    for i in range(len(b)):
+        res = res + b[i][::-1]
+        if i < len(b):
+            res = res + ' '
+    return res
+
+
+a = 'This is an example!'
+print(invers(a))
+a = 'double spaces'
+print(invers(a))
 
 
 
